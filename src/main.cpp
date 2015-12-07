@@ -20,5 +20,6 @@ int main()
 */
 	std::cout << "Creating entity\n";
 	entity test;
+	test.update();
 	return 0;
 }
