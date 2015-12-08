@@ -1,4 +1,5 @@
 #include "component.h"
+#include "entity.h"
 #include <iostream>
 
 component::component()

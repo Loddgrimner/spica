@@ -1,9 +1,9 @@
 #pragma once
 #include <vector>
 #include <memory>
-#include "component.h"
 
 class component;
+class game;
 
 class entity
 {
@@ -15,4 +15,5 @@ public:
 
 private:
 	std::vector<std::shared_ptr<component>> components;
+	game* mgame;
 };

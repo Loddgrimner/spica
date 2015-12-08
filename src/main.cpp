@@ -2,7 +2,7 @@
 
 #include <ncurses.h>
 #include <locale.h>
-#include "entity.h"
+#include "game.h"
 #include <iostream>
 
 int main()
@@ -18,8 +18,9 @@ int main()
 	int c = getch();
 	endwin();
 */
-	std::cout << "Creating entity\n";
-	entity test;
+	game test;
+	test.buildentity();
+
 	test.update();
 	return 0;
 }

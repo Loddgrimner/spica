@@ -1,6 +1,5 @@
 #pragma once
 #include <memory>
-#include "entity.h"
 
 class entity;
 

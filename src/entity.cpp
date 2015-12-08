@@ -1,7 +1,9 @@
+#include <iostream>
 #include "entity.h"
 #include "ncurses.h"
-#include <iostream>
 #include "dumbmover.h"
+#include "component.h"
+#include "game.h"
 
 entity::entity()
 {
