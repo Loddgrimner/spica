@@ -1,4 +1,5 @@
 #pragma once
+#include <memory>
 #include "entity.h"
 #include "dumbmover.h"
 
@@ -8,7 +9,7 @@ public:
 	entitybuilder ();
 	virtual ~entitybuilder ();
 
-	void build();
+	std::shared_ptr<entity> build();
 
 private:
 };

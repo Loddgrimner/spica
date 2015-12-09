@@ -10,7 +10,9 @@ entitybuilder::~entitybuilder()
 	std::cout << "Builder Destructor\n";
 }
 
-void entitybuilder::build()
+std::shared_ptr<entity> entitybuilder::build()
 {
 	std::cout << "Building\n";
+	std::shared_ptr<entity> e = std::make_shared<entity>();
+	return e; 
 }

@@ -17,10 +17,13 @@ game::~game()
 void game::update()
 {
 	std::cout << "Game update\n";
+	for (auto& i : entities) {
+		i->update();
+	}
 }
 
 void game::buildentity()
 {
 	std::cout << "Game building entity\n";
-	mentitybuilder->build();
+	entities.push_back(mentitybuilder->build());
 }
