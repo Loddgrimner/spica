@@ -1,4 +1,5 @@
 #include <iostream>
+#include <algorithm>
 #include "game.h"
 #include "entity.h"
 #include "entitybuilder.h"
@@ -20,6 +21,10 @@ void game::update()
 	for (auto& i : entities) {
 		i->update();
 	}
+	entities.erase(
+    		std::remove_if(entities.begin(), entities.end(),
+        	[](const std::shared_ptr<entity> p) { return p->isdead(); }),
+    		entities.end());
 }
 
 void game::buildentity()

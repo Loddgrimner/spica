@@ -12,8 +12,11 @@ public:
 	~entity ();
 	void pumpmessage(int code, int value);
 	void update();
+	bool isdead() const;
+	void die();
 
 private:
 	std::vector<std::shared_ptr<component>> components;
-	game* mgame;
+	game* mgame = nullptr;
+	bool dead = false;
 };

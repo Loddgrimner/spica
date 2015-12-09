@@ -36,3 +36,13 @@ void entity::update()
 		i->update();
 	}
 }
+
+bool entity::isdead() const
+{
+	return dead;
+}
+
+void entity::die()
+{
+	dead = true;
+}
