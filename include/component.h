@@ -8,14 +8,15 @@ class component
 public:
 	component ();
 	virtual ~component ();
-	void sethome(entity* home);
+	void sethost(entity* home);
 	virtual void receivemessage(int code, int value) = 0;
 	virtual void update() = 0;
 
-//protected:
+protected:
 	void sendmessage(int code, int value);
+	void killhost();
 
 private:
-	entity* mhome;
+	entity* mhost = nullptr;
 	/* data */
 };

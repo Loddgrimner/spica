@@ -2,18 +2,18 @@
 #include "entity.h"
 #include "ncurses.h"
 #include "dumbmover.h"
+#include "lifetimer.h"
 #include "component.h"
 #include "game.h"
 
 entity::entity()
 {
 	std::cout << "Entity Constructor\n";
-	for(int i = 0; i < 2; i++)
-	{
-		std::shared_ptr<component> c = std::make_shared<dumbmover>();
-		c->sethome(this);
-		components.push_back(c);
-	}
+	std::shared_ptr<component> c = std::make_shared<dumbmover>();
+	c->sethost(this);
+	std::shared_ptr<component> t = std::make_shared<lifetimer>();
+	t->sethost(this);
+	components.push_back(t);
 }
 
 entity::~entity()

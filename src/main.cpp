@@ -22,5 +22,10 @@ int main()
 	test.buildentity();
 
 	test.update();
+	test.update();
+	test.update();
+	test.update();
+	test.update();
+	test.update();
 	return 0;
 }
