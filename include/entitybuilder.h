@@ -1,7 +1,6 @@
 #pragma once
 #include <memory>
 #include "entity.h"
-#include "dumbmover.h"
 
 class entitybuilder
 {

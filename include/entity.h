@@ -14,6 +14,7 @@ public:
 	void update();
 	bool isdead() const;
 	void die();
+	void insertcomponent(std::shared_ptr<component>);
 
 private:
 	std::vector<std::shared_ptr<component>> components;
