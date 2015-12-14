@@ -24,8 +24,8 @@ void game::update()
 	entities.erase(std::remove_if(entities.begin(), entities.end(), [](const std::shared_ptr<const entity> p) { return p->isdead(); }), entities.end());
 }
 
-void game::buildentity()
+void game::buildentity(std::map<std::string,int>& data)
 {
 	std::cout << "Game building entity\n";
-	entities.push_back(mentitybuilder->build());
+	entities.push_back(mentitybuilder->build(data));
 }

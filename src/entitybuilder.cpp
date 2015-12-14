@@ -12,9 +12,15 @@ entitybuilder::~entitybuilder()
 	std::cout << "Builder Destructor\n";
 }
 
-std::shared_ptr<entity> entitybuilder::build()
+std::shared_ptr<entity> entitybuilder::build(std::map<std::string,int>& data)
 {
-	std::cout << "Building\n";
+	std::cout << "Building, data:\n";
+	for(const auto& element : data)
+	{
+		std::cout << element.first << ' ';
+		std::cout << element.second << '\n';
+	}
+	
 	std::shared_ptr<entity> e = std::make_shared<entity>();
 	e->insertcomponent(std::make_shared<dumbmover>());
 	e->insertcomponent(std::make_shared<lifetimer>());

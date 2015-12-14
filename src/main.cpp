@@ -2,8 +2,10 @@
 
 #include <ncurses.h>
 #include <locale.h>
-#include "game.h"
 #include <iostream>
+#include <map>
+#include <string>
+#include "game.h"
 
 int main()
 {
@@ -19,7 +21,15 @@ int main()
 	endwin();
 */
 	game test;
-	test.buildentity();
+
+	std::map <std::string, int> data{
+		{"Test", 1},
+		{"Hmm", 3},
+		{"Xpos", 5},
+		{"Ypos", 2}
+	};
+
+	test.buildentity(data);
 
 	test.update();
 	test.update();
