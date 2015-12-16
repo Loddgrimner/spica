@@ -19,8 +19,12 @@ void lifetimer::update()
 		std::cout << "Lifetimer killing host.\n";
 	}
 }
-void lifetimer::receivemessage(int code, int value)
+void lifetimer::receivemessage(const std::map<std::string,int>& data)
 {
-	std::cout << "Lifetimer received message";
-	std::cout << " Code:" << code << " Value:" << value << "\n";
+	std::cout << "Lifetimer received message:\n";
+	for(const auto& element : data)
+	{
+		std::cout << element.first << ' ';
+		std::cout << element.second << '\n';
+	}
 }

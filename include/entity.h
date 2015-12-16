@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include <memory>
+#include <map>
+#include <string>
 
 class component;
 class game;
@@ -10,7 +12,7 @@ class entity
 public:
 	entity ();
 	~entity ();
-	void pumpmessage(int code, int value);
+	void pumpmessage(const std::map<std::string,int>& data);
 	void update();
 	bool isdead() const;
 	void die();

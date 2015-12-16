@@ -7,7 +7,7 @@ public:
 	dumbmover ();
 	virtual ~dumbmover ();
 	
-	void receivemessage(int code, int value);
+	void receivemessage(const std::map<std::string,int>& data);
 	void update();
 
 private:

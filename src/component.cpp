@@ -21,13 +21,13 @@ void component::update()
 {
 }
 
-void component::receivemessage(int code, int value)
+void component::receivemessage(const std::map<std::string,int>& data)
 {
 }
 
-void component::sendmessage(int code, int value)
+void component::sendmessage(const std::map<std::string,int>& data)
 {
-	mhost->pumpmessage(code, value);
+	mhost->pumpmessage(data);
 }
 
 void component::killhost()

@@ -1,5 +1,7 @@
 #pragma once
 #include <memory>
+#include <map>
+#include <string>
 
 class entity;
 
@@ -9,11 +11,11 @@ public:
 	component ();
 	virtual ~component ();
 	void sethost(entity* home);
-	virtual void receivemessage(int code, int value) = 0;
+	virtual void receivemessage(const std::map<std::string,int>& data) = 0;
 	virtual void update() = 0;
 
 protected:
-	void sendmessage(int code, int value);
+	void sendmessage(const std::map<std::string,int>& data);
 	void killhost();
 
 private:

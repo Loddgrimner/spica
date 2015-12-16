@@ -14,11 +14,11 @@ entity::~entity()
 	std::cout << "Entity Destructor\n";
 }
 
-void entity::pumpmessage(int code, int value)
+void entity::pumpmessage(const std::map<std::string,int>& data)
 {
 	std::cout << "Enity Pumping messages\n";
 	for (auto& i : components) {
-		i->receivemessage(code, value);
+		i->receivemessage(data);
 	}
 }
 
