@@ -15,5 +15,6 @@ public:
 	void buildentity(std::map<std::string,int>& data);
 private:
 	std::vector<std::shared_ptr<entity>> entities;
+	std::vector<std::shared_ptr<entity>> builtentities;
 	entitybuilder* mentitybuilder;
 };
